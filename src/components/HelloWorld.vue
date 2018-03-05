@@ -1,7 +1,11 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <h2 @click="send">Essential Links</h2>
+    <div class="">
+      来一个牛逼闪闪的名字
+      <input type="text" class="input" autofocus>
+      <el-button type="primary">开始尬聊</el-button>
+    </div>
   </div>
 </template>
 <script>
@@ -9,19 +13,9 @@ export default {
   name: 'HelloWorld',
   data() {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to chatRoom'
     }
-  },
-  mounted() {
-    // console.log(socket)
-    // socket.emit('hi', 'hello')
-  },
-  methods: {
-    send() {
-      socket.emit('hi', 'hello')
-    }
-  },
-
+  }
 }
 
 </script>
@@ -32,18 +26,10 @@ h2 {
   font-weight: normal;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
+.input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
 }
 
 </style>

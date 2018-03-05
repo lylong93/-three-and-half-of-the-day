@@ -10,7 +10,15 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/api': {
+        target: 'http://openapi.tuling123.com/openapi/api', //源地址 
+        changeOrigin: true, //改变源 
+        pathRewrite: {
+          '^/api': 'http://openapi.tuling123.com/openapi/api', //路径重写 //
+        }
+      }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
